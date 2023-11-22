@@ -6,5 +6,19 @@ app.listen(8080, () => {
 })
 
 app.get('/', (req, res) => {
-    res.send('hello')
+    res.sendFile(__dirname + '/index.html')
+    console.log(__dirname)
 })
+
+app.get('/about', (req, res) => {
+    res.sendFile(__dirname + '/about.html')
+})
+
+app.get('/news', (req, res) => {
+    res.send('오늘 맑음')
+})
+
+app.get('/shop', (req, res) => {
+    res.send('쇼핑페이지입니다')
+})
+
